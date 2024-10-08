@@ -2,7 +2,7 @@
 
 ## The RETL Implementation
 
-<img width="1355" alt="image" src="https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728053181/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF83LjI0LjMzX0FNX295ZWVtMg==/drilldown">
+<img width="1355" alt="image" src="https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728053181/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF83LjI0LjQ5X0FNX2xqYjd5MA==/drilldown">
 
 The idea is simple: to allow analyzed and queried data extracted from Data Warehouses to be put into customer success platforms, ad platforms, etc., for marketing teams and others to act on the data.
 
