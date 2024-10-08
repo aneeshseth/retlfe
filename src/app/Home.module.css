@@ -1,0 +1,22 @@
+.floatingImage {
+  animation: float 10s ease-in-out infinite;
+}
+
+.responsiveImage {
+  width: 10vw;
+  height: auto;
+  max-width: 100px;
+  min-width: 50px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
