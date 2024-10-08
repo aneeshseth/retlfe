@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RETL Implementation
 
-## Getting Started
+## The RETL Implementation
 
-First, run the development server:
+![RETL Overview](https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728053181/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF83LjI0LjMzX0FNX295ZWVtMg==/drilldown)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The idea is simple: to allow analyzed and queried data extracted from Data Warehouses to be put into customer success platforms, ad platforms, etc., for marketing teams and others to act on the data.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Source, Destination, and other metadata stored in a PostgreSQL database.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Sources and the Data
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![Source Data Example 1](https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728053181/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF83LjI0LjQ5X0FNX2xqYjd5MA==/drilldown)
 
-## Learn More
+![Source Data Example 2](https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728053180/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF83LjE1LjU5X0FNX255dW13bg==/drilldown)
 
-To learn more about Next.js, take a look at the following resources:
+![Source Data Example 3](https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728053181/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF83LjE3LjAwX0FNX3JncTRjdg==/drilldown)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Every time a user spins up a Source and Destination with a pipeline, a Kubernetes pod entity starts up for both. The code extracts data from the source, sends it to Apache Kafka on a specific topic, then consumes it, receiving it in the destination all within K8S pods.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Pod Structure](https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728053181/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF83LjE3LjU3X0FNX3ZwMGI0eQ==/drilldown)
 
-## Deploy on Vercel
+While ingesting data into the destination, the count for a pipeline ID is incremented in an in-memory Redis store. The server checks Redis for counts, iterating over the pipelines by their public ID.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Redis Monitoring](https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728053181/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF83LjE3LjMwX0FNX3E3ZTB2aA==/drilldown)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Final Overview](https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728057701/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF85LjAxLjE0X0FNX2ltbHlmcQ==/drilldown)
