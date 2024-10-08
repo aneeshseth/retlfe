@@ -1,4 +1,6 @@
-# The RETL Implementation
+# The RETL Implementation. 
+
+This repository represents the frontend for the platform.
 
 <img width="1355" alt="image" src="https://res.cloudinary.com/dhxeo4rvc/image/upload/v1728346949/Screen_Shot_2024-10-07_at_5.22.08_PM_ckn1d9.png">
 
