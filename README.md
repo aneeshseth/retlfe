@@ -1,6 +1,6 @@
 # The RETL Implementation. 
 
-This repository represents the UI for the platform.
+This repository represents the UI for the platform. Backend: https://github.com/aneeshseth/retlbe
 
 <img width="1355" alt="image" src="https://res.cloudinary.com/dhxeo4rvc/image/upload/v1728346949/Screen_Shot_2024-10-07_at_5.22.08_PM_ckn1d9.png">
 
