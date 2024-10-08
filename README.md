@@ -10,7 +10,7 @@ The idea is simple: to allow analyzed and queried data extracted from Data Wareh
 
 ## Sources and the Data
 
-<img width="1355" alt="image" src="https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728053181/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF83LjI0LjQ5X0FNX2xqYjd5MA==/drilldown">
+<img width="1355" alt="image" src="https://res.cloudinary.com/dhxeo4rvc/image/upload/v1728053181/Screen_Shot_2024-10-04_at_7.24.49_AM_ljb7y0.png">
 
 <img width="1355" alt="image" src="https://res-console.cloudinary.com/dhxeo4rvc/thumbnails/v1/image/upload/v1728053180/U2NyZWVuX1Nob3RfMjAyNC0xMC0wNF9hdF83LjE1LjU5X0FNX255dW13bg==/drilldown">
 
