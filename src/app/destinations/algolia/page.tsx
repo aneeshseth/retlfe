@@ -12,7 +12,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 function CardWithForm() {
@@ -25,7 +24,7 @@ function CardWithForm() {
 
     const requestBody = {
       connector_type: "Output",
-      connector_name: "algolia-" + uuidv4().toString(),
+      connector_name: "algolia-" + "uwbsfnjewdnxm",
       name: "algolia",
       config: {
         settings: {

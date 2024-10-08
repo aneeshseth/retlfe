@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
 
 export default function CreatePipelinePage() {
   const router = useRouter();
@@ -28,7 +27,7 @@ export default function CreatePipelinePage() {
   };
 
   const startPods = async () => {
-    const uuidGen = uuidv4().toString();
+    const uuidGen = "ewfbkckewjbfckjw,cb";
 
     const selectedSourceObj = sources.find(
       (source: any) => source.id === selectedSource
